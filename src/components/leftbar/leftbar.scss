@@ -1,0 +1,70 @@
+@import '../../style.scss';
+
+.container-leftbar {
+  @include themify($themes) {
+    flex: 2;
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    background-color: themed('bg');
+    color: themed('textColor');
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    .leftbar-box {
+      padding: 20px;
+
+      height: 100vh;
+      hr {
+        margin: 20px 0;
+        border: none;
+        height: 0.5px;
+        background-color: themed('border');
+      }
+
+      .leftbar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          font-size: 12px;
+        }
+
+        .leftbar-user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          span {
+            font-size: 12px;
+          }
+        }
+
+        .leftbar-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .leftbar-icon {
+          gap: 10px;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

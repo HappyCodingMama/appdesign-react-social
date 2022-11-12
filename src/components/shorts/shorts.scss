@@ -1,0 +1,77 @@
+@import '../../style.scss';
+
+.container-shorts {
+  display: flex;
+  gap: 10px;
+  height: 220px;
+  margin-bottom: 30px;
+
+  @include mobile {
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  @include tablet {
+    height: 180px;
+  }
+
+  .shorts-box {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-black);
+
+    @include mobile {
+      flex: none;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: var(--color-black);
+      font-weight: 500;
+      font-size: 14px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    button {
+      position: absolute;
+      bottom: 36px;
+      left: 10px;
+      color: var(--color-white);
+      background-color: var(--color-black);
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      @include mobile {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+}

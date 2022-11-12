@@ -1,0 +1,83 @@
+.container-register {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .register-box {
+    display: flex;
+
+    width: 50%;
+    min-height: 400px;
+
+    .left-register-box {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      background-color: var(--color-white);
+
+      h1 {
+        color: var(--color-bg-variant);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input {
+          border: none;
+          font-size: 16px;
+          border-bottom: 2px solid var(--color-primary);
+          padding: 10px 10px;
+          font-family: 'Roboto Slab', serif;
+          background-color: var(--color-white);
+        }
+        button {
+        }
+      }
+    }
+
+    .right-register-box {
+      background: linear-gradient(
+          rgba(255, 255, 255, 0.733),
+          rgba(0, 0, 0, 0.452)
+        ),
+        url('https://firebasestorage.googleapis.com/v0/b/socialmedia-thechats-mysql.appspot.com/o/szabo-viktor-28ZbKOWiZfs-unsplash.jpg?alt=media&token=39a3dbcf-b1f6-4e0c-9d47-301a01090bb8')
+          center;
+      background-color: black;
+      background-blend-mode: luminosity;
+      background-size: cover;
+      flex: 1;
+      padding: 70px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: var(--color-white);
+      border: 20px solid var(--color-primary);
+      h3 {
+        font-size: 60px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: var(--color-black);
+        font-weight: 500;
+      }
+      h1 {
+        font-size: 80px;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: var(--color-primary-variant);
+        text-decoration: underline;
+      }
+      p {
+        margin-top: 10px;
+      }
+      span {
+        font-size: 14px;
+      }
+      button {
+      }
+    }
+  }
+}

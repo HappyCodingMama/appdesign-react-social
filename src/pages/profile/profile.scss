@@ -1,0 +1,171 @@
+@import '../../style.scss';
+
+.container-profile {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    background-color: themed('bgSoft');
+    color: themed('textColor');
+    flex: 8.5;
+
+    .profile-images {
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+      .profile-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .profilePic {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        left: 40px;
+        margin: auto;
+        top: 170px;
+
+        @include mobile {
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+    }
+    .profile-box {
+      .profile-info {
+        display: flex;
+        justify-content: space-between;
+        height: 220px;
+        background-color: themed('bg');
+        color: themd('textColor');
+        padding: 0 50px;
+
+        @include mobile {
+          flex-direction: column;
+          justify-content: center;
+          height: 490px;
+        }
+        @include tablet {
+          padding: 0 30px;
+        }
+      }
+      .profile-info-left {
+        flex: 2;
+        padding: 70px 0;
+
+        @include mobile {
+          flex: 0;
+          text-align: center;
+          padding-top: 70px;
+          padding-bottom: 40px;
+        }
+
+        span {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        p {
+          margin-top: 10px;
+          margin-right: 80px;
+
+          @include mobile {
+            margin-right: 0;
+          }
+
+          @include tablet {
+            margin-right: 20px;
+          }
+        }
+      }
+      .profile-info-right {
+        padding: 20px 0;
+        flex: 1;
+
+        @include mobile {
+          padding: 0;
+        }
+
+        .info-icons {
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+          width: 100%;
+          margin-bottom: 20px;
+
+          @include mobile {
+            justify-content: center;
+            margin-bottom: 40px;
+          }
+
+          .btn-setting {
+            background-color: transparent;
+            padding: 4px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid themed('logo');
+            font-family: 'Roboto', sans-serif;
+          }
+          .btn-follow {
+            background-color: transparent;
+            padding: 4px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: themed('textColor');
+            border: 1px solid themed('logo');
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+          }
+          .btn-message {
+            background-color: themed('textColor');
+            color: themed('bg');
+            padding: 4px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid themed('border');
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+          }
+        }
+        .info-item {
+          flex-direction: column;
+          margin-top: 6px;
+
+          @include mobile {
+            margin-bottom: 10px;
+          }
+
+          .info-arrow {
+            margin-top: 3px;
+            margin-left: 5px;
+            font-size: 16px;
+          }
+
+          .info-item-title {
+            font-size: 12px;
+          }
+          .info-item-content {
+            font-weight: 500;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .container-profile-posts {
+      padding: 60px 90px;
+
+      @include mobile {
+        padding: 10px;
+      }
+
+      @include tablet {
+        padding: 20px;
+      }
+    }
+  }
+}

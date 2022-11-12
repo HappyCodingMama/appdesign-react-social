@@ -1,0 +1,79 @@
+.container-login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-box {
+    display: flex;
+    background-color: var(--color-white);
+    width: 50%;
+    min-height: 400px;
+
+    .left-login-box {
+      flex: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.452)),
+        url('https://firebasestorage.googleapis.com/v0/b/socialmedia-thechats-mysql.appspot.com/o/scott-webb-eA2z1JSzZFI-unsplash.jpg?alt=media&token=10a935ab-c9c7-4e35-9385-3609d7d4b036')
+          center;
+      background-color: black;
+      background-blend-mode: luminosity;
+      background-size: cover;
+      padding: 70px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: var(--color-white);
+      border: 20px solid var(--color-primary);
+
+      h3 {
+        font-size: 60px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: var(--color-white);
+        font-weight: 400;
+      }
+      h1 {
+        font-size: 80px;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        text-decoration: underline;
+      }
+      p {
+        margin-top: 10px;
+      }
+      span {
+        font-size: 14px;
+      }
+      button {
+      }
+    }
+    .right-login-box {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+
+      h1 {
+        color: var(--color-bg-variant);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input {
+          border: none;
+          font-size: 16px;
+          border-bottom: 2px solid var(--color-primary);
+          padding: 10px 10px;
+          font-family: 'Roboto Slab', serif;
+          background-color: var(--color-white);
+        }
+        button {
+        }
+      }
+    }
+  }
+}

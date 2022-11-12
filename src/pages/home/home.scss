@@ -1,0 +1,22 @@
+@import '../../style.scss';
+
+.container-home {
+  display: flex;
+}
+
+.home-contents {
+  @include themify($themes) {
+    background-color: themed('bgSoft');
+    color: themed('textColor');
+    padding: 60px 90px;
+    flex: 7;
+
+    @include mobile {
+      padding: 10px;
+    }
+
+    @include tablet {
+      padding: 20px;
+    }
+  }
+}
