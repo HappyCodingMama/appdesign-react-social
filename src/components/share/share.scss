@@ -1,0 +1,66 @@
+@import '../../style.scss';
+
+.container-share {
+  @include themify($themes) {
+    background-color: themed('bg');
+    color: themed('textColor');
+    border-radius: 10px;
+
+    .share-box {
+      .share-top {
+        display: flex;
+        gap: 20px;
+
+        padding: 20px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        input {
+          border: none;
+          width: 100%;
+          font-family: 'Roboto Slab', serif;
+          background-color: transparent;
+          color: themed('textColor');
+        }
+      }
+
+      .share-bottom {
+        .share-items {
+          display: flex;
+          justify-content: space-between;
+          border-top: 1px solid themed('border');
+          margin: 0 20px;
+          padding: 16px 0;
+
+          .share-icons {
+            font-size: 14px;
+            display: flex;
+            .share-icon {
+              display: flex;
+              align-items: center;
+              margin-right: 12px;
+              gap: 6px;
+              .share-content {
+                font-size: 12px;
+              }
+            }
+          }
+          .btn-share {
+            background-color: themed('textColor');
+            color: themed('bg');
+            padding: 4px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid themed('border');
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
