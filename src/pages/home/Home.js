@@ -5,6 +5,7 @@ import Leftbar from '../../components/leftbar/Leftbar';
 import './home.scss';
 import Shorts from '../../components/shorts/Shorts';
 import Posts from '../../components/posts/Posts';
+import Share from '../share/Share';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Leftbar />
         <div className='home-contents'>
           <Shorts />
+         <Share />
           <Posts />
         </div>
         <Rightbar />
