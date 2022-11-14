@@ -1,7 +1,7 @@
 import React from 'react';
 import './posts.scss';
 import Post from '../post/Post';
-import Share from '../share/Share';
+
 
 const Posts = () => {
   const posts = [
@@ -35,7 +35,7 @@ const Posts = () => {
   ];
   return (
     <div className='container-posts'>
-      <Share />
+ 
       {posts.map((post) => (
         <Post post={post} key={post.id} />
       ))}
